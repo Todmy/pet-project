@@ -5,4 +5,5 @@
 
 angular.module('app', ['ngRoute', 'app.config', 'app.users']);
 angular.module('app.config', []);
+angular.module('app.services', ['app.config']);
 angular.module('app.users', []);
