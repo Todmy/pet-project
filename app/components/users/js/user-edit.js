@@ -3,6 +3,6 @@
  */
 
 angular.module('app.users')
-  .controller('userController', function () {
+  .controller('userEditController', function () {
 
   });
