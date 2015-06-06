@@ -1,17 +1,55 @@
 {
   "api": {
-    "posts": [
+    "users": [
       {
         "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-      }
-    ],
-    "comments": [
+        "username": "hulk",
+        "status": "online"
+      },
       {
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
+        "id": 2,
+        "username": "iron man",
+        "email": "tony@tony.best",
+        "status": "offline"
+      },
+      {
+        "id": 3,
+        "username": "spider-man",
+        "email": "ololo@my.space",
+        "status": "running"
+      },
+      {
+        "id": 4,
+        "username": "wolverine",
+        "email": "pappy@xman.com",
+        "status": "stopped"
+      },
+      {
+        "id": 5,
+        "username": "captain america",
+        "email": "what@it.is",
+        "status": "suspended"
+      },
+      {
+        "id": 6,
+        "username": "thor",
+        "status": "resumed"
+      },
+      {
+        "id": 7,
+        "username": "ant-man",
+        "email": "bla@bla.bla",
+        "status": "online"
+      },
+      {
+        "id": 8,
+        "username": "daredevil",
+        "status": "offline"
+      },
+      {
+        "id": 9,
+        "username": "ghost rider",
+        "status": "online"
       }
     ]
   }
