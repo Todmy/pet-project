@@ -3,6 +3,6 @@
  */
 
 angular.module('app.users')
-  .controller('listController', function ($scope) {
-
+  .controller('listController', function ($scope, userService) {
+    console.log(userService.get());
   });

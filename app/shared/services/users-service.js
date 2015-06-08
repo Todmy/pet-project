@@ -3,6 +3,9 @@
  */
 
 angular.module('app.services')
-  .factory('users', function (SERVER_CONFIG) {
-
-  })
+  .factory('userService', function (SERVER_CONFIG, $resource) {
+    return $resource(SERVER_CONFIG.url, {id: '@id'}, {
+      'create': {method: 'POST'},
+      'update': {method: 'PUT'}
+    })
+  });
