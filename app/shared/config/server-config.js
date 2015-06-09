@@ -4,7 +4,7 @@
 
 angular.module('app.config')
   .constant('SERVER_CONFIG', {
-    'url': 'http://localhost:3000/api',
+    'url': 'http://localhost:3000',
     'port': '3000',
     'baseUrl': 'http://localhost'
   });
