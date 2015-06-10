@@ -17,7 +17,7 @@ angular.module('app.services')
       },
       create: function (user) {
         var userForUpdate = new usersService(user);
-        userForUpdate.$create();
+        return userForUpdate.$create();
       },
       remove: function (userId) {
         return usersService.remove({id: userId}).$promise;

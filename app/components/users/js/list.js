@@ -5,9 +5,10 @@
 angular.module('app.users')
   .controller('listController', ListController);
 
-function ListController ($scope, usersRepository) {
-  this.scope = $scope;
+function ListController (usersRepository, ROUTES, $location) {
   this.usersRepository = usersRepository;
+  this.location = $location;
+  this.ROUTES = ROUTES;
 
   this.initModel();
 }
@@ -21,12 +22,16 @@ ListController.prototype.getUsers = function () {
   this.usersRepository.users().then(function (response) {
     self.users = response;
   });
-  this.usersRepository.remove(10).then(function (response) {
-    self.user = response;
-  });
-//  this.usersRepository.create({
-//    "id": 10,
-//      "username": "hulk-mahalk",
-//      "status": "offline"
-//  });
+};
+
+ListController.prototype.removeUser = function (userId) {
+  this.usersRepository.remove(userId)
+};
+
+ListController.prototype.editUser = function (userId) {
+  this.location.path(this.ROUTES.edit.user.replace(':id', userId))
+};
+
+ListController.prototype.viewUser = function (userId) {
+  return '#' + this.ROUTES.view.user.replace(':id', userId)
 };

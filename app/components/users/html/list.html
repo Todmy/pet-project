@@ -1,1 +1,9 @@
-list
+<div class="users-list" ng-repeat="user in listCtrl.users track by $index">
+    <div class="user">
+        <a href="{{ listCtrl.viewUser(user.id) }}">{{ user.username }} (id: {{ user.id }})</a>
+        <button ng-click="listCtrl.removeUser(user.id)">remove</button>
+        <button ng-click="listCtrl.editUser(user.id)">edit</button>
+    </div>
+</div>
+<a href="#{{ listCtrl.ROUTES.newUser }}" class="add-user">add new user</a>
+
